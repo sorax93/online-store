@@ -20,8 +20,9 @@ store.dispatch(getTotal());
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <BrowserRouter>
     <Provider store={store}>
-      <BrowserRouter basename="/online-store">
+      
         <PersistGate persistor={persist}>
           <ApolloProvider client={client}>
             <ThemeProvider theme={theme}>
@@ -29,7 +30,8 @@ root.render(
             </ThemeProvider>
           </ApolloProvider>
         </PersistGate>
-      </BrowserRouter>
+      
     </Provider>
+    </BrowserRouter>
   </React.StrictMode>
 );
