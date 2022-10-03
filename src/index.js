@@ -21,7 +21,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter basename="/online-store/">
+      <BrowserRouter basename="/online-store">
         <PersistGate persistor={persist}>
           <ApolloProvider client={client}>
             <ThemeProvider theme={theme}>
